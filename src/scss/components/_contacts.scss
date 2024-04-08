@@ -2,52 +2,24 @@
 @use "../utils/mixins/" as *;
 
 .contacts {
-  padding: rem(86) 0;
-
+  padding: rem(120) 0;
+  
   &__wrapper {
-    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: calc(var(--radius-main) * 8);
-    padding: 0 rem(106);
-    min-height: 500px;
-    background-color: var(--color-green-900);
+    justify-content: space-between;
   }
 
   &__content {
     z-index: 2;
     width: 100%;
-    max-width: 715px;
-  }
-
-  img {
-    position: absolute;
-    right: 70px;
-    bottom: 0;
-    pointer-events: none;
-  }
-
-  &__inner {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    border-radius: calc(var(--radius-main) * 3);
-    padding: 24px;
-    width: 100%;
-    max-width: 596px;
-    box-shadow: 106px -86px 100px 0 rgba(39, 113, 160, 0.14);
-    color: var(--color-grey-400);
-    background: linear-gradient(90deg, rgba(254, 254, 254, 0.7) 0%, rgba(218, 246, 202, 0.7) 100%);
-    backdrop-filter: blur(66px);
-    gap: 24px;
+    max-width: 716px;
   }
 
   &__form {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
-    max-width: 612px;
+    max-width: 100%;
     gap: 24px;
 
     label {
@@ -55,23 +27,63 @@
     }
 
     input {
-      border-radius: 16px;
-      padding: 16 24px;
+      position: relative;
+      border: 1px solid rgba(50, 50, 50, 0.36);
+      border-radius: 10px;
+      padding: 8px 20px;
       width: 100%;
       max-width: 100%;
-      color: var(--color-white);
-      background-color: rgba(255, 255, 255, 0.08);
+      font-weight: var(--fw-700);
+      font-size: 14px;
+      line-height: 1.86;
 
-      &::placeholder {
-        line-height: 1.33;
-        color: var(--color-white);
+      // &::placeholder {
+      //   color: rgba(50, 50, 50, 0.36);
+      // }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        margin-bottom: 16px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../images/icons/account.svg");
+        background-position: 0 0;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
+
+      &[type="email"] {
+        color: red;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 12px;
+
+    &::before {
+      content: "";
+      position: relative;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/icons/email.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
   h2 {
     margin-bottom: rem(48);
-    color: var(--color-white);
+    text-align: left;
+    font-size: clamp(1.5rem, 1rem + 2.2222vi, 3rem);
+    line-height: 1.06;
+    color: var(--color-blue-800);
   }
 
   @include media(tablet) {

@@ -1,0 +1,28 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.story {
+  &__content {
+    margin: 0 auto rem(46);
+  }
+
+  &__image {
+    overflow: hidden;
+    margin: 0 auto rem(24);
+    border-radius: var(--radius-main);
+    width: fit-content;
+  }
+
+  &__desc {
+    margin: 0 auto rem(48);
+    width: 100%;
+    max-width: 1010px;
+    line-height: 1.62;
+    text-align: center;
+
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+}

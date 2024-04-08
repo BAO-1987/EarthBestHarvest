@@ -3,17 +3,23 @@
 
 .footer {
   padding: rem(43) 0 31px;
+  color: var(--color-white);
   background-color: var(--color-green-900);
 
   &__bottom {
-    font-family: var(--font-family-secondary);
-    text-align: center;
-    color: var(--color-green-400);
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.6;
 
     p {
       line-height: 1.33;
       letter-spacing: 0;
     }
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
   }
 
   .logo {

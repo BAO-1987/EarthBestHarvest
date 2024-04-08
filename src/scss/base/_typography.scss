@@ -5,11 +5,11 @@ h1,
 h2,
 h3 {
   overflow: hidden;
-  margin-bottom: 32px;
-  font-family: var(--font-family-secondary);
-  font-weight: var(--fw-500);
-  font-size: clamp(35px, 1.4583rem + 3.2407vi, 70px);
-  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: var(--fw-700);
+  font-size: clamp(1.875rem, 1.2917rem + 2.5926vi, 3.625rem);
+  line-height: 1.21;
+  letter-spacing: 0.02em;
   color: var(--color-green-900);
 
   span {
@@ -19,11 +19,17 @@ h3 {
 }
 
 h2 {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  font-size: clamp(1.5rem, 1.125rem + 1.6667vi, 2.625rem);
+  line-height: 1.24;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 h3 {
-  font-size: clamp(18px, 1.0833rem + 0.7407vi, 18px);
+  letter-spacing: -0.03em;
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 p {
@@ -32,4 +38,13 @@ p {
   @include media(mobile-m) {
     font-size: 16px;
   }
+}
+
+.subtext {
+  font-weight: var(--fw-500);
+  font-size: 22px;
+  line-height: 1.45;
+  text-align: center;
+  color: var(--color-green-400);
+  opacity: 0.6;
 }

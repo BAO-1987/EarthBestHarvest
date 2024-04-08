@@ -13,9 +13,9 @@ body {
   font-weight: var(--fw-400);
   font-style: normal;
   font-size: clamp(16px, 1vw, 20px);
-  line-height: 1.6;
+  line-height: 1.5;
   letter-spacing: 0;
-  color: var(--color-green-900);
+  color: var(--color-blue-900);
   background-color: var(--color-white);
   font-optical-sizing: auto;
   scroll-padding: var(--header-height);
@@ -74,17 +74,13 @@ body {
 }
 
 .main {
-  padding-top: calc(var(--header-height) - 1px);
+  padding-top: var(--header-height);
 }
 
 .logo {
-  margin-right: rem(68);
+  margin-right: rem(150);
   width: 100%;
-  max-width: 261px;
-
-  @include media(tablet-wide) {
-    max-width: 220px;
-  }
+  max-width: 210px;
 }
 
 .is-scrolling {

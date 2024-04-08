@@ -1,0 +1,24 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.featured {
+  &__desc {
+    margin: 0 auto rem(64);
+
+    .subtext {
+      text-align: center;
+      color: var(--color-green-400);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: rem(64);
+    gap: 36px 24px;
+  }
+
+  .btn {
+    margin-inline: auto;
+  }
+}

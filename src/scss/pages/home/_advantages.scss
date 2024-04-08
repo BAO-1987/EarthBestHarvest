@@ -1,0 +1,69 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.advantages {
+  padding: rem(120) 0;
+
+  &__content {
+    margin: 0 auto rem(48);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto rem(46);
+    width: 100%;
+    max-width: 927px;
+    gap: 24px;
+  }
+
+  &__item {
+    &::before {
+      content: "";
+      position: relative;
+      display: block;
+      margin-bottom: 12px;
+      width: 48px;
+      height: 48px;
+      background-image: url("../images/icons/locally.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 12px;
+      opacity: 0.4;
+    }
+
+    &--locally {
+      &::before {
+        background-image: url("../images/icons/locally.svg");
+      }
+    }
+
+    &--organic {
+      &::before {
+        background-image: url("../images/icons/organic.svg");
+      }
+    }
+
+    &--practices {
+      &::before {
+        background-image: url("../images/icons/practices.svg");
+      }
+    }
+  }
+
+  &__desc {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+}
