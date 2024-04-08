@@ -1,0 +1,93 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.nav {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: 33px;
+
+      @include media(tablet-wide) {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__link {
+    color: var(--color-white);
+    font-family: var(--font-family-secondary);
+    font-size: 18px;
+    line-height: 1.33;
+    background-color: transparent;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: var(--color-green-400);
+    }
+
+    &.true {
+      color: var(--color-green-400);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &--footer {
+    margin-bottom: 28px;
+    #{$root}__list {
+      margin: 0;
+    }
+
+    #{$root}__item {
+      @include media(mobile-m) {
+        margin: 0 0 16px 0;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &--footer {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &--footer {
+      #{$root}__link {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &--footer {
+      #{$root}__list {
+        flex-direction: column;
+      }
+    }
+  }
+}
