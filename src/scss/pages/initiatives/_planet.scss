@@ -1,0 +1,38 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.planet {
+  &__content {
+    margin: 0 auto rem(48);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1032px;
+    gap: 77px;
+  }
+
+  &__item {
+    img {
+      margin-bottom: 16px;
+      border-radius: var(--radius-main);
+    }
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--color-green-900);
+    }
+  }
+
+  h2 {
+    margin-bottom: 22px;
+  }
+}

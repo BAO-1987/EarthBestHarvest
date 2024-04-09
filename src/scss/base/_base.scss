@@ -51,7 +51,7 @@ body {
   padding: rem(98) 0;
 
   @include media(tablet) {
-    padding: rem(40) 0;
+    padding: 30px 0;
   }
 }
 
@@ -59,11 +59,16 @@ body {
   background-color: var(--color-green-10);
 }
 
-.container {
+.container,
+.wrapper {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   width: 100%;
   max-width: var(--container-width);
+}
+
+.wrapper {
+  max-width: 1064px;
 }
 
 .site-container {
@@ -81,10 +86,14 @@ body {
   margin-right: rem(150);
   width: 100%;
   max-width: 210px;
+
+  @include media(tablet-wide) {
+    margin-right: 16px;
+  }
 }
 
 .is-scrolling {
-  scrollbar-color: var(--color-green-900) var(--color-white);
+  scrollbar-color: var(--color-green-400) var(--color-white);
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
@@ -101,7 +110,7 @@ body {
   &::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background-color: var(--color-green-900);
+    background-color: var(--color-green-400);
   }
 
   @include media(tablet-wide) {

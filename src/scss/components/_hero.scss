@@ -3,17 +3,20 @@
 
 .hero {
   $root: &;
+
   padding: rem(118) 0;
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
   }
 
   &__image {
     overflow: hidden;
     border-radius: var(--radius-main);
+
     img {
       width: 100%;
     }
@@ -25,64 +28,49 @@
     translate: 0 -44px;
   }
 
-  &--home {
-    padding: rem(64) 0;
-  }
-
   .subtext {
     text-align: left;
     color: var(--color-blue-900);
   }
 
-  @include media(tablet-wide) {
-    &__image {
-      margin-right: 60px;
+  &--home {
+    padding: rem(64) 0;
+  }
+
+  &--initiatives {
+    #{$root}__content {
+      translate: 0;
     }
   }
 
   @include media(tablet) {
-    &__wrapper {
-      min-height: 350px;
-      padding: 0;
-    }
+    padding: 40px 0;
 
     &__inner {
-      padding: 0 16px !important;
-      flex-direction: column-reverse;
-    }
-
-    &--reverse {
-      #{$root}__inner {
-        flex-direction: column;
-      }
-
-      #{$root}__content {
-        padding: 16px;
-        margin: 0 auto;
-        translate: 0;
-      }
-
-      #{$root}__image {
-        margin: 0 auto;
-        width: 100%;
-        max-width: 100%;
-      }
+      flex-direction: column;
     }
 
     &__content {
-      padding: 16px;
       max-width: 100%;
       translate: 0;
     }
 
     &__image {
-      margin: 0 auto;
       width: 100%;
-      max-width: 100%;
 
       img {
-        aspect-ratio: 12/9;
         object-position: center;
+        aspect-ratio: 18/9;
+      }
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    &--reverse {
+      #{$root}__inner {
+        flex-direction: column-reverse;
       }
     }
   }

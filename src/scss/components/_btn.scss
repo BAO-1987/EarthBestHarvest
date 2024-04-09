@@ -33,7 +33,7 @@
   }
 
   &--reverse {
-    padding: 14px 32px;
+    padding: 13px 32px;
     font-weight: var(--fw-400);
     border-color: var(--color-green-400);
     color: var(--color-green-400);
@@ -48,24 +48,22 @@
   }
 
   &--filter {
-    padding: 11px 23px;
-    font-size: 16px;
-    line-height: 1.5;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1.47;
     white-space: nowrap;
-    color: var(--color-green-900);
+    color: var(--color-green-400);
     background-color: transparent;
 
     &:hover,
     &:focus {
       border-color: transparent;
-      color: var(--color-white);
-      background-color: var(--color-green-400);
+      color: var(--color-green-900);
     }
 
     &.active {
       border-color: transparent;
-      color: var(--color-white);
-      background-color: var(--color-green-400);
+      color: var(--color-green-900);
     }
   }
 

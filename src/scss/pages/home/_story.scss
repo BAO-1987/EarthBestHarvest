@@ -30,7 +30,7 @@
     }
 
     #{$root}__desc {
-      margin-bottom: 50px;
+      margin-bottom: 48px;
       max-width: 1032px;
       text-align: left;
 
@@ -46,11 +46,31 @@
     }
   }
 
+  &--initiatives {
+    #{$root}__desc {
+      margin-bottom: 0;
+    }
+  }
+
   h2 {
     margin-bottom: 15px;
   }
 
   .btn {
     margin: 0 auto;
+    background-color: transparent;
+  }
+
+  @include media(tablet) {
+    &__content,
+    &__desc {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(mobile-m) {
+    .btn {
+      max-width: 100%;
+    }
   }
 }

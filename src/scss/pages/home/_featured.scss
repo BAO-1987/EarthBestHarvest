@@ -15,10 +15,42 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: rem(64);
-    gap: 36px 24px;
+    gap: 37px 24px;
+  }
+
+  h2 {
+    margin-bottom: 13px;
   }
 
   .btn {
     margin-inline: auto;
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    &__desc,
+    &__list {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    .btn {
+      max-width: 100%;
+    }
   }
 }

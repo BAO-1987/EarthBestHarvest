@@ -33,7 +33,7 @@ function filterEvents(filter) {
   conferences.forEach((conference) => {
     let eventCategory = conference.getAttribute("data-category");
 
-    
+
     if (filter === "all" || filter === eventCategory) {
       conference.removeAttribute("hidden");
     } else {
