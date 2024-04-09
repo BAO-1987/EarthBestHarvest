@@ -2,7 +2,7 @@
 @use "../utils/mixins/" as *;
 
 .footer {
-  padding: rem(43) 0 31px;
+  padding: rem(48) 0;
   color: var(--color-white);
   background-color: var(--color-green-900);
 
@@ -12,14 +12,17 @@
     opacity: 0.6;
 
     p {
-      line-height: 1.33;
-      letter-spacing: 0;
+      line-height: 1.1;
     }
   }
 
   &__list {
     display: flex;
     gap: 24px;
+  }
+
+  &__link {
+    font-size: 14px;
   }
 
   .logo {
