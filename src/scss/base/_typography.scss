@@ -38,6 +38,10 @@ p {
   @include media(mobile-m) {
     font-size: 16px;
   }
+
+  &:has(span) {
+    opacity: 1;
+  }
 }
 
 .subtext {

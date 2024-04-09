@@ -1,0 +1,79 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.step {
+  &__content {
+    margin: 0 auto rem(52);
+   width: 100%;
+   max-width: 854px;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: 822px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 293px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 16px;
+
+    &::before {
+      content: "";
+      position: relative;
+      align-self: flex-start;
+      display: block;
+      width: 48px;
+      height: 48px;
+      background-image: url("../images/icons/practices.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      aspect-ratio: 1/1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
+  
+  &__desc {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: var(--radius-main);
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .subtext {
+    text-align: left;
+  }
+
+  h2 {
+    margin-bottom: 21px;
+  }
+}

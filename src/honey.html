@@ -1,6 +1,6 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="page">
-<include src="./html/_head.html" locals='{"title": "Wildflower Honey"}'></include>
+<include src="./html/_head.html" locals='{"title": "Chicken Breast Fillets \"Sunrise Delight\""}'></include>
 
 <body class="page__body">
   <div class="site-container">
@@ -8,58 +8,16 @@
 
     <main class="main">
 
-      <article class="single-product">
-
-        <div class="container">
-
-          <div class="single-product__inner">
-
-            <img src="./images/article/honey_big.jpg" alt="Wildflower Honey" width="504" height="640" loading="lazy" />
-
-            <div class="single-product__content">
-              <a class="single-product__link" href="products.html">Back</a>
-
-              <h1>
-                Wildflower Honey
-              </h1>
-
-              <p>
-                Harvested from bees that forage on diverse, organic wildflower fields, our honey boasts a complex flavor
-                profile that varies with the seasons. This natural sweetener is raw and unfiltered, preserving all the
-                beneficial enzymes and pollens.
-              </p>
-
-              <div class="single-product__desc">
-                <h2>
-                  Product Details:
-                </h2>
-
-                <ul class="single-product__list">
-
-                  <li>
-                    <span>Weight:</span> 12 oz jars.
-                  </li>
-
-                  <li>
-                    <span>Packaging:</span> Glass jars.
-                  </li>
-
-                  <li>
-                    <span>Nutritional Information:</span> Rich in antioxidants, natural enzymes, and pollen.
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </article>
+      <include src="./html/_simple-product.html" locals='{
+        "images": "chicken_big",
+        "title": "Chicken Breast Fillets \"Sunrise Delight\"",
+        "desc": "Chicken Breast Fillets \"Sunrise Delight\"",
+        "text": "Our \"Sunrise Delight\" chicken breast fillets are tender and lean, sourced from free-range chickens raised with care on our farm. Versatile and delicious, they can be grilled, baked, or sautéed to perfection, providing a wholesome and satisfying meal",
+        "categories": "Meat and Poultry",
+        "packaging": "1 kg"
+    }'></include>
 
       <include src="./html/_contacts.html"></include>
-
 
     </main>
 
@@ -68,4 +26,4 @@
   </div>
 </body>
 
-</html> -->
+</html>

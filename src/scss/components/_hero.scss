@@ -3,6 +3,7 @@
 
 .hero {
   $root: &;
+  padding: rem(118) 0;
 
   &__inner {
     display: flex;

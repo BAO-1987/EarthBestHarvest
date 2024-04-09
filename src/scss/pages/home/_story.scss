@@ -2,6 +2,8 @@
 @use "../../utils/mixins/" as *;
 
 .story {
+  $root: &;
+
   &__content {
     margin: 0 auto rem(48);
   }
@@ -21,6 +23,29 @@
     text-align: center;
   }
 
+  &--about {
+    #{$root}__content {
+      width: 100%;
+      max-width: 775px;
+    }
+
+    #{$root}__desc {
+      margin-bottom: 50px;
+      max-width: 1032px;
+      text-align: left;
+
+      p {
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    #{$root}__image {
+      margin-bottom: 0;
+    }
+  }
+
   h2 {
     margin-bottom: 15px;
   }
@@ -28,6 +53,4 @@
   .btn {
     margin: 0 auto;
   }
-
-
 }

@@ -9,6 +9,11 @@
     justify-content: space-between;
   }
 
+  &__image {
+    overflow: hidden;
+    border-radius: var(--radius-main);
+  }
+
   &__content {
     z-index: 2;
     width: 100%;
