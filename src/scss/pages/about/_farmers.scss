@@ -3,7 +3,7 @@
 
 .farmers {
   &__content {
-    margin: 0 auto rem(46);
+    margin: 0 auto rem(47);
     width: 100%;
     max-width: 682px;
     text-align: center;
@@ -40,12 +40,18 @@
   }
 
   h2 {
-    margin-bottom: 23px;
+    margin-bottom: 20px;
   }
 
   @include media(tablet-wide) {
     &__list {
       gap: 24px;
+    }
+  }
+
+  @include media(tablet) {
+    &__content {
+      margin-bottom: 30px;
     }
   }
 

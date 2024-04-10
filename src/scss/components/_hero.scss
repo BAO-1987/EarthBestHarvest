@@ -76,6 +76,8 @@
   }
 
   @include media(mobile-m) {
+    padding: 20px 0;
+    
     .btn {
       max-width: 100%;
     }

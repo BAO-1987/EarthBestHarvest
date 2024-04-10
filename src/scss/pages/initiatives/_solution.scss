@@ -2,7 +2,7 @@
 @use "../../utils/mixins/" as *;
 
 .solution {
-  padding: 118px 0;
+  padding: rem(118) 0;
 
   &__wrapper {
     display: flex;
@@ -12,6 +12,13 @@
   &__content {
     width: 100%;
     max-width: 494px;
+  }
+
+  &__image {
+    img {
+      border-radius: var(--radius-main);
+      width: 100%;
+    }
   }
 
   h2 {
@@ -28,4 +35,26 @@
     text-align: left;
   }
 
+  @include media(tablet) {
+    padding: 30px 0;
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 100%;
+
+      h2,
+      .subtext {
+        text-align: center;
+      }
+    }
+
+    &__image {
+      img {
+        aspect-ratio: 18/9;
+      }
+    }
+  }
 }

@@ -24,7 +24,7 @@
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 38px;
+      margin-right: 36px;
 
       @include media(tablet-wide) {
         margin-right: 15px;
@@ -38,6 +38,7 @@
     font-weight: var(--fw-500);
     font-size: 18px;
     line-height: 1.44;
+    letter-spacing: 0.01em;
     background-color: transparent;
     transition: color 0.3s linear;
 
@@ -81,8 +82,6 @@
     }
 
     #{$root}__item {
-      // margin: 0;
-
       &:not(:last-child) {
         @include media(mobile-m) {
           margin: 0 0 16px 0;
@@ -95,10 +94,15 @@
     }
   }
 
-
   @include media(tablet-wide) {
     &__list {
       margin-right: 16px;
+    }
+  }
+
+  @include media(tablet) {
+    &__list {
+      margin-right: 0;
     }
   }
 

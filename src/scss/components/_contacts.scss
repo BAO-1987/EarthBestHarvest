@@ -26,7 +26,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 100%;
-    gap: 24px;
+    gap: 25px;
 
     label {
       width: 100%;
@@ -59,7 +59,7 @@
   &__link {
     display: flex;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     font-size: 14px;
     line-height: 1.85;
     gap: 12px;
@@ -78,9 +78,9 @@
 
   h2 {
     margin-bottom: rem(48);
-    text-align: left;
     font-size: clamp(1.5rem, 1rem + 2.2222vi, 3rem);
     line-height: 1.06;
+    text-align: left;
     color: var(--color-blue-800);
   }
 
