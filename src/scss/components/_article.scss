@@ -33,9 +33,9 @@
     line-height: 1.43;
     text-decoration: underline;
     text-decoration-color: currentColor;
-    text-underline-offset: 2px;
     color: var(--color-green-900);
     transition: color 0.4s linear;
+    text-underline-offset: 2px;
 
     &:hover {
       color: var(--color-green-400);

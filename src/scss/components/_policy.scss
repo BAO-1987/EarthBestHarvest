@@ -12,11 +12,11 @@
 
   h1 {
     margin-bottom: rem(60);
+    text-align: center;
   }
 
   h2 {
-    margin-bottom: 24px;
-    font-size: clamp(24px, 1rem + 2.2222vi, 48px);
+    text-align: left;
   }
 
   ul {
@@ -39,7 +39,7 @@
   }
 
   p {
-    line-height: 1.2;
+    color: var(--color-green-900);
 
     &:not(:last-child) {
       margin-bottom: 20px;
