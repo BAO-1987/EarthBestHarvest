@@ -10,13 +10,9 @@
   }
 
   &__list {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1033px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    gap: 77px;
+    gap: rem(77);
   }
 
   &__item {
@@ -26,8 +22,7 @@
 
     p {
       font-size: 12px;
-      color: var(--color-green-900);
-      opacity: 0.6;
+      color: rgba(4, 58, 42, 0.6);
 
       &:first-of-type {
         margin-bottom: 8px;
@@ -35,7 +30,7 @@
     }
 
     span {
-      opacity: 1 !important;
+      color: var(--color-green-900);
     }
 
     img {
@@ -48,13 +43,23 @@
     margin-bottom: 23px;
   }
 
+  @include media(tablet-wide) {
+    &__list {
+      gap: 24px;
+    }
+  }
+
   @include media(mobile-l) {
     &__list {
       grid-template-columns: repeat(2, 1fr);
     }
 
     &__item {
-      padding: 24px;
+      img {
+        width: 100%;
+        object-position: top;
+        aspect-ratio: 18/9;
+      }
 
       &:last-child {
         grid-column: 2 span;
